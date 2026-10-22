@@ -1,0 +1,459 @@
+
+:root {
+  --bg-page: #eef2f6;
+  --bg-card: #ffffff;
+  --border-color: #cbd5e1;
+  --border-accent: #94a3b8;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-light: #eff6ff;
+  --accent-color: #0284c7;
+  --tag-bg: #f1f5f9;
+  --tag-border: #e2e8f0;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg-page);
+  color: var(--text-primary);
+  min-height: 100vh;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  line-height: 1.5;
+}
+
+/* Container Utama sesuai Mockup Wireframe (14F - Directory Profile Page) */
+.page-wrapper {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.profile-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  padding: 28px;
+}
+
+/* Badge Header Mockup: "14F - Directory Profile Page" */
+.mockup-header-badge {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: #f8fafc;
+  border: 1px solid var(--border-accent);
+  padding: 4px 14px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+/* ========================================================
+   1. TOP SECTION: Foto Diri, Biodata Lengkap, Categories
+   ======================================================== */
+.profile-top-section {
+  display: grid;
+  grid-template-columns: 190px 1fr 220px;
+  gap: 24px;
+  align-items: start;
+  padding-bottom: 24px;
+  border-bottom: 1.5px dashed var(--border-color);
+  margin-bottom: 24px;
+}
+
+/* Foto Diri */
+.profile-avatar-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #e2e8f0;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+/* Biodata Lengkap */
+.profile-bio-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-name {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.profile-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.address-block {
+  font-style: normal;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.contact-list {
+  list-style: none;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-item strong {
+  min-width: 90px;
+  color: var(--text-primary);
+}
+
+.contact-item a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+  color: var(--primary-hover);
+}
+
+/* Kolom Kanan: Categories */
+.profile-categories-aside {
+  background: #f8fafc;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+}
+
+.categories-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.categories-list {
+  list-style-type: square;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--text-secondary);
+}
+
+.categories-list li {
+  line-height: 1.4;
+}
+
+/* ========================================================
+   2. MIDDLE SECTION: 2 Paragraf Deskripsi Diri
+   ======================================================== */
+.profile-description-section {
+  padding-bottom: 24px;
+  border-bottom: 1.5px dashed var(--border-color);
+  margin-bottom: 24px;
+}
+
+.profile-description-section p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  text-align: justify;
+  margin-bottom: 14px;
+}
+
+.profile-description-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================================
+   3. BOTTOM SECTION: Video, Koleksi Foto, Attachments
+   ======================================================== */
+.profile-bottom-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Kolom Kiri: Video Player */
+.video-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.video-wrapper {
+  background: #0f172a;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  max-height: 190px;
+  object-fit: cover;
+  display: block;
+  outline: none;
+}
+
+.video-caption {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 6px 8px;
+  background: #f8fafc;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Kolom Tengah: Koleksi Foto 2x2 */
+.gallery-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  height: 100%;
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #f1f5f9;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-tooltip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(15, 23, 42, 0.85);
+  color: #ffffff;
+  font-size: 10.5px;
+  padding: 4px 6px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.gallery-item:hover .gallery-tooltip {
+  opacity: 1;
+}
+
+/* Kolom Kanan: Attachments Fieldset Box */
+.attachments-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.attachments-box {
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  background: #f8fafc;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.attachments-legend {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  padding: 0 6px;
+}
+
+.attachments-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.attachment-item a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.attachment-item a:hover {
+  color: var(--primary-hover);
+  transform: translateX(3px);
+}
+
+.attachment-icon {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer Halaman */
+.page-footer {
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin-top: 24px;
+  padding-top: 12px;
+}
+
+/* ========================================================
+   RESPONSIVE DESIGN (Tablet & Mobile)
+   ======================================================== */
+@media (max-width: 900px) {
+  .profile-top-section {
+    grid-template-columns: 160px 1fr;
+  }
+
+  .profile-categories-aside {
+    grid-column: 1 / -1;
+  }
+
+  .profile-bottom-section {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 12px 8px;
+  }
+
+  .profile-card {
+    padding: 18px;
+  }
+
+  .profile-top-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-avatar-wrapper {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+

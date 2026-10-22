@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Web Profile - Praktikum 3 UI/UX</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Wrapper Utama Halaman Profil -->
+  <main class="page-wrapper">
+    <article class="profile-card">
+
+      <!-- Header Label Mockup: 14F - Directory Profile Page -->
+      <header class="mockup-header-wrapper">
+        <span class="mockup-header-badge">14F - Directory Profile Page</span>
+      </header>
+
+      <!-- BAGIAN 1: Profil Atas (Foto Diri, Biodata Lengkap, Kategori) -->
+      <section class="profile-top-section" aria-label="Biodata Profil">
+        
+        <!-- a. Foto Diri -->
+        <figure class="profile-avatar-wrapper">
+          <img src="assets/img/profile.jpg" alt="Foto Diri Mahasiswa" width="300" height="375" fetchpriority="high">
+        </figure>
+
+        <!-- b. Biodata Lengkap -->
+        <div class="profile-bio-details">
+          <h1 class="profile-name">Muhammad Ghazy Aulia Ramadhan</h1>
+          <p class="profile-subtitle">Mahasiswa Teknik Informatika &bull; Desain UI/UX &amp; Web</p>
+
+          <address class="address-block">
+            Kampus B STT Terpadu Nurul Fikri<br>
+            Jl. Lenteng Agung Raya No. 20, Srengseng Sawah<br>
+            Jagakarsa, Jakarta Selatan, DKI Jakarta 12640
+          </address>
+
+          <ul class="contact-list">
+            <li class="contact-item">
+              <strong>Email:</strong>
+              <a href="mailto:mgar0810@gmail.com">mgar0810@gmail.com</a>
+            </li>
+            <li class="contact-item">
+              <strong>Telephone:</strong>
+              <a href="tel:+6285810818375">+62 85810818375</a>
+            </li>
+            <li class="contact-item">
+              <strong>Status:</strong>
+              <span>Aktif - Semester 1</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Kolom Kanan: Categories -->
+        <aside class="profile-categories-aside" aria-label="Kategori Keahlian">
+          <h2 class="categories-title">Categories</h2>
+          <ul class="categories-list">
+            <li>UI/UX Design</li>
+            <li>Web Development</li>
+            <li>HTML5 &amp; CSS3 Layout</li>
+            <li>Responsive Interface</li>
+          </ul>
+        </aside>
+
+      </section>
+
+      <!-- BAGIAN 2: Deskripsi Diri (2 Paragraf Lengkap & Singkat) -->
+      <section class="profile-description-section" aria-label="Deskripsi Diri">
+        <p>
+          Saya adalah seorang mahasiswa program studi Teknik Informatika di STT Terpadu Nurul Fikri yang memiliki minat dan antusiasme tinggi pada bidang Desain UI/UX serta Frontend Web Development. Dalam setiap proses perancangan, saya senantiasa menerapkan metodologi <em>User-Centered Design</em> guna menghasilkan antarmuka digital yang tidak hanya menarik secara estetika, namun juga efisien, intuitif, dan memberikan kenyamanan optimal bagi pengguna.
+        </p>
+        <p>
+          Melalui kegiatan praktikum dan berbagai proyek mandiri, saya terbiasa menyusun struktur layout web semantik berbasis HTML5, merancang gaya responsif dengan modern CSS, serta memperhatikan hierarki visual dan aksesibilitas. Saya memiliki semangat belajar yang kuat, adaptif terhadap perkembangan teknologi web modern, serta siap berkontribusi secara kolaboratif dalam tim untuk menciptakan solusi digital yang bermanfaat.
+        </p>
+      </section>
+
+      <!-- BAGIAN 3: Multimedia (Video & Koleksi Foto) serta Link Download File -->
+      <section class="profile-bottom-section" aria-label="Multimedia dan Lampiran">
+
+        <!-- d1. Konten Multimedia: Video Player -->
+        <div class="video-column">
+          <h2 class="section-label">
+            <span>&#9658;</span> Video Profil
+          </h2>
+          <figure class="video-wrapper">
+            <video width="640" height="360" controls>
+            <source src="assets/img/AsanagiUmi.mp4" type="video/mp4">
+            <source src="assets/img/AsanagiUmi.webm" type="video/webm">
+            Browser Anda tidak mendukung tag video HTML5.
+            </video>
+
+            <figcaption class="video-caption">Video Profil &amp; Showreel Proyek</figcaption>
+          </figure>
+        </div>
+
+        <!-- d2. Konten Multimedia: Koleksi Foto (2x2 Grid) -->
+        <div class="gallery-column">
+          <h2 class="section-label">
+            <span>&#9638;</span> Koleksi Foto
+          </h2>
+          <div class="gallery-grid">
+            <figure class="gallery-item" title="my bini">
+              <img src="assets/img/binigua.jpg" alt="PICTURE MY WIFE" loading="lazy">
+              <figcaption class="gallery-tooltip">FOTO-FOTO BINI</figcaption>
+            </figure>
+            <figure class="gallery-item" title="my bini">
+              <img src="assets/img/biniguaini.jpg" alt="PICTURE MY WIFE" loading="lazy">
+              <figcaption class="gallery-tooltip">FOTO-FOTO BINI</figcaption>
+            </figure>
+            <figure class="gallery-item" title="my bini">
+              <img src="assets/img/biniguajir.png" alt="PICTURE MY WIFE" loading="lazy">
+              <figcaption class="gallery-tooltip">FOTO-FOTO BINI</figcaption>
+            </figure>
+            <figure class="gallery-item" title="my bini">
+              <img src="assets/img/mbg.jpg" alt="PICTURE MY WIFE" loading="lazy">
+              <figcaption class="gallery-tooltip">FOTO-FOTO BINI</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- e. Link Download File (Attachments) -->
+        <aside class="attachments-column" aria-label="Lampiran Berkas">
+          <fieldset class="attachments-box">
+            <legend class="attachments-legend">Attachments</legend>
+            <ul class="attachments-list">
+              <li class="attachment-item">
+                <a href="assets/docs/TUGAS_5_OAK.pdf" download="TUGAS_5_OAK.pdf">
+                  <span class="attachment-icon">&#128196;</span>
+                  TUGAS 5 OAK.pdf
+                </a>
+              </li>
+              <li class="attachment-item">
+                <a href="assets/docs/LAPORAN_PRAKTIKUM_2_DESAIN_UI_UX_RAMA.pdf" download="LAPORAN_PRAKTIKUM_2_DESAIN_UI_UX_RAMA.pdf">
+                  <span class="attachment-icon">&#128193;</span>
+                  Praktikum 2.pdf
+                </a>
+              </li>
+
+            </ul>
+          </fieldset>
+        </aside>
+
+      </section>  
+
+    </article>
+
+    <!-- Footer Halaman -->
+    <footer class="page-footer">
+      <p>&copy; 2026 Praktikum Desain UI/UX &amp; Pemrograman Web - STT Terpadu Nurul Fikri</p>
+    </footer>
+  </main>
+
+</body>
+</html>
